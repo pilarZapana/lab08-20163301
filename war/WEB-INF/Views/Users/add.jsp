@@ -72,7 +72,7 @@
 		</select>
 		<p>Genero:</p>
 		<input type="radio" name="gender" value="mujer">Mujer <input
-			type="radio" name="gender" value="hombre">Hombre
+			type="radio" name="gender" value="hombre" checked>Hombre
 		<p>Rol:</p>
 		<select name="role">
 			<%

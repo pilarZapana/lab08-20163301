@@ -30,8 +30,8 @@
     </ul>
   </nav>
 	<header class="w3-container w3-white w3-center" style="padding:64px 16px">
-	<form action="resources/edit" method="post"><input type="hidden" name="id" value="<%=r.getId()%>">
-				<input type="text" name="name" value="<%=r.getUrl()%>"></td>
+	<form action="edit" method="post"><input type="hidden" name="id" value="<%=r.getId()%>">
+				<input type="text" name="url" value="<%=r.getUrl()%>"></td>
 				<p></p>
 				<input type="radio" name="status" value="true" checked>True
 				<input type="radio" name="status" value="false">False</td>

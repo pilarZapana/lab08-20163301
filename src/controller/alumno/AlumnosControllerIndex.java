@@ -38,7 +38,7 @@ public class AlumnosControllerIndex extends HttpServlet {
 			String query="select from "+ User.class.getName()+" where email=='"+uGoogle.getEmail()+"' && status==true";
 			List<User> uSearch=(List<User>) pm.newQuery(query).execute();
 			if(uSearch.isEmpty()){
-				RequestDispatcher dp= getServletContext().getRequestDispatcher("/WEB-INF/Views/Errors/error2.jsp");
+				RequestDispatcher dp= getServletContext().getRequestDispatcher("/WEB-INF/Views/Errors/error.jsp");
 				dp.forward(request, response);
 			}else{
 				System.out.println(request.getServletPath());
@@ -46,7 +46,7 @@ public class AlumnosControllerIndex extends HttpServlet {
 					+" where url == '"+request.getServletPath()+"' && status==true";
 			List <Resource> rSearch=(List<Resource>) pm.newQuery(query2).execute();
 			if(rSearch.isEmpty()){
-				RequestDispatcher dp= getServletContext().getRequestDispatcher("/WEB-INF/Views/Errors/error3.jsp");
+				RequestDispatcher dp= getServletContext().getRequestDispatcher("/WEB-INF/Views/Errors/error.jsp");
 				dp.forward(request, response);
 			}
 			else{
@@ -54,7 +54,7 @@ public class AlumnosControllerIndex extends HttpServlet {
 						+" where roleId == "+uSearch.get(0).getRoleId()+" && urlId== "+rSearch.get(0).getId()+" && status==true";	
 						List <Access> aSearch=(List<Access>) pm.newQuery(query3).execute();		
 			if(aSearch.isEmpty()){
-				RequestDispatcher dp= getServletContext().getRequestDispatcher("/WEB-INF/Views/Errors/error4.jsp");
+				RequestDispatcher dp= getServletContext().getRequestDispatcher("/WEB-INF/Views/Errors/error.jsp");
 				dp.forward(request, response);
 			}else{
 				RequestDispatcher dp=getServletContext().getRequestDispatcher("/alumnos/view");
